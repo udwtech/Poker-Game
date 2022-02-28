@@ -1,11 +1,16 @@
 using System;
 using System.Collections.Generic;
+
 namespace PokerGame
 {
+    /**
+        This hold the player information.
+        @property <see cref="string"/> walletAddress - Player's wallet address.
+    */
     public class Player{
-        private string walletAddress;
+        private Wallet walletAddress;
         public Player(string walletAddress) {
-            this.walletAddress = walletAddress;
+            this.walletAddress = new Wallet(walletAddress);
         }
 
         public List<Card> CardsOnHand() {
